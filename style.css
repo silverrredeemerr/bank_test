@@ -1,158 +1,160 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background: #0a0a0a;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0f1c;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
 }
 
 .phone-frame {
     width: 390px;
     max-width: 100%;
     background: #0f1626;
-    border-radius: 48px;
+    border-radius: 52px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-    height: 740px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    height: 760px;
     display: flex;
     flex-direction: column;
-    border: 12px solid #1a2338;
+    border: 14px solid #1a2338;
+}
+
+.status-bar {
+    background: #0f1626;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
 }
 
 .app-header {
-    background: #1a2338;
-    padding: 18px 20px 12px;
-    color: white;
+    background: #0f1626;
+    padding: 10px 20px;
 }
 
-.header-content {
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.bank-logo {
-    font-weight: 700;
-    font-size: 22px;
-    color: #00b4ff;
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.edit-btn {
-    background: rgba(255,255,255,0.1);
-    border: none;
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #3b82f6;
     color: white;
-    padding: 6px 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.upravit-btn {
+    background: #1e2937;
+    color: white;
+    border: none;
+    padding: 8px 18px;
     border-radius: 20px;
     font-size: 14px;
-    margin-right: 8px;
 }
 
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 15px 20px;
     overflow-y: auto;
     background: #0f1626;
     color: white;
 }
 
-.balance-card {
-    background: linear-gradient(135deg, #003087, #0066cc);
-    border-radius: 24px;
-    padding: 24px 20px;
-    margin-bottom: 24px;
-    color: white;
-    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
-}
+.section { margin-bottom: 28px; }
 
-.balance-header {
+.section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.balance-label { font-size: 15px; opacity: 0.9; }
-
-.toggle-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.balance-amount {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 12px 0 8px;
-    letter-spacing: -1px;
-}
-
-.balance-change {
-    font-size: 15px;
-}
-
-.positive { color: #4ade80; }
-
-.quick-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.quick-btn {
-    flex: 1;
-    padding: 12px;
-    background: rgba(255,255,255,0.15);
-    border: none;
-    border-radius: 16px;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.section h3 {
     margin-bottom: 12px;
-    color: #a3bffa;
-    font-size: 17px;
+    color: #94a3b8;
 }
 
-.account-item {
+.account-card {
     background: #1e2937;
-    padding: 18px;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 18px;
 }
 
 .account-balance {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 700;
+    margin: 12px 0;
 }
 
-.transactions {
-    background: #1e2937;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.transaction {
-    padding: 16px 18px;
+.graph-placeholder {
+    height: 80px;
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 12px;
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #334155;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #60a5fa;
 }
 
-.transaction:last-child { border-bottom: none; }
+.card-visual {
+    margin-bottom: 15px;
+}
+
+.visa-card {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    border-radius: 18px;
+    padding: 20px;
+    height: 180px;
+    position: relative;
+    color: white;
+}
+
+.card-logo {
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.card-number {
+    position: absolute;
+    bottom: 55px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.card-holder {
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.credit-balance {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 8px;
+}
 
 .bottom-nav {
     display: flex;
     background: #1a2338;
     padding: 10px 0;
-    border-top: 1px solid #334155;
 }
 
 .nav-item {
@@ -162,12 +164,6 @@ body {
     font-size: 12px;
 }
 
-.nav-item.active {
-    color: #60a5fa;
-}
+.nav-item.active { color: #60a5fa; }
 
-.nav-icon {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 3px;
-}
+.nav-icon { font-size: 26px; display: block; margin-bottom: 4px; }
