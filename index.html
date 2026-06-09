@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatra Banka • Mock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="bank-logo">Tatra Banka</div>
+                <div class="header-right">
+                    <span id="time" class="time"></span>
+                    <div class="profile-pic">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="balance-card">
+                <div class="balance-header">
+                    <span class="balance-label">Загальний баланс</span>
+                    <button id="toggle-balance" class="toggle-btn">👁️</button>
+                </div>
+                <div class="balance-amount" id="balance-amount">12 458,76 €</div>
+                <div class="balance-change">+248,50 € (+2,04%) <span class="this-month">цього місяця</span></div>
+                
+                <div class="quick-actions">
+                    <button class="quick-btn" onclick="changeBalance(100)">+100</button>
+                    <button class="quick-btn" onclick="changeBalance(-100)">-100</button>
+                    <button class="quick-btn" onclick="randomBalance()">🎲</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Мої рахунки</h3>
+                <div class="account-item">
+                    <div>
+                        <strong>Поточний рахунок</strong><br>
+                        <small>SK12 1100 0000 1234 5678 9012</small>
+                    </div>
+                    <div class="account-balance" id="main-account">12 458,76 €</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h3>Останні операції</h3>
+                    <a href="#" class="see-all">Всі</a>
+                </div>
+                <div id="transactions-list" class="transactions"></div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active"><span class="nav-icon">🏠</span><span class="nav-text">Головна</span></div>
+            <div class="nav-item"><span class="nav-icon">💸</span><span class="nav-text">Платежі</span></div>
+            <div class="nav-item"><span class="nav-icon">📊</span><span class="nav-text">Аналітика</span></div>
+            <div class="nav-item"><span class="nav-icon">👤</span><span class="nav-text">Профіль</span></div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
