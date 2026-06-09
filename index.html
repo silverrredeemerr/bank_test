@@ -8,53 +8,60 @@
 </head>
 <body>
     <div class="phone-frame">
+        <!-- Status bar -->
+        <div class="status-bar">
+            <span id="time">10:37</span>
+            <div class="right-info">5G • 87%</div>
+        </div>
+
         <header class="app-header">
-            <div class="header-content">
-                <div class="bank-logo">Tatra banka</div>
-                <div class="header-right">
-                    <span id="time" class="time"></span>
-                    <button class="edit-btn">Upraviť</button>
-                    <div class="profile-pic">👤</div>
+            <div class="header-top">
+                <div class="user-info">
+                    <div class="avatar">P</div>
+                    <div>
+                        <strong>P. Ivan</strong><br>
+                        <small>Privátny banking</small>
+                    </div>
                 </div>
+                <button class="upravit-btn">Upraviť</button>
             </div>
         </header>
 
         <main class="main-content">
-            <!-- Баланс -->
-            <div class="balance-card">
-                <div class="balance-header">
-                    <span class="balance-label">Celkový zostatok</span>
-                    <button id="toggle-balance" class="toggle-btn">👁️</button>
-                </div>
-                <div class="balance-amount" id="balance-amount">12 458,76 €</div>
-                <div class="balance-change positive">+ 248,50 € (+2,04 %) tento mesiac</div>
-
-                <div class="quick-actions">
-                    <button class="quick-btn" onclick="changeBalance(100)">+100 €</button>
-                    <button class="quick-btn" onclick="changeBalance(-100)">-100 €</button>
-                    <button class="quick-btn" onclick="randomBalance()">🎲 Náhodný</button>
-                </div>
-            </div>
-
-            <!-- Рахунки -->
-            <div class="section">
-                <h3>Moje účty</h3>
-                <div class="account-item">
-                    <div class="account-info">
-                        <strong>Bieżący účet</strong><br>
-                        <small>SK12 1100 0000 1234 5678 9012</small>
-                    </div>
-                    <div class="account-balance" id="main-account">12 458,76 €</div>
-                </div>
-            </div>
-
-            <!-- Останні операції -->
+            <!-- Účty -->
             <div class="section">
                 <div class="section-header">
-                    <h3>Posledné pohyby</h3>
-                    <a href="#" class="see-all">Všetky</a>
+                    <h3>Účty</h3>
+                    <span class="see-all">Zobraziť všetko</span>
                 </div>
-                <div id="transactions-list" class="transactions"></div>
+                <div class="account-card">
+                    <div class="account-info">
+                        <strong>Demo účet</strong><br>
+                        <small>SK12 1100 0000 0008 1234 5678</small>
+                    </div>
+                    <div class="account-balance" id="main-balance">502,00 €</div>
+                    <div class="graph-placeholder">📈</div>
+                </div>
+            </div>
+
+            <!-- Karty -->
+            <div class="section">
+                <div class="section-header">
+                    <h3>Karty</h3>
+                    <span class="see-all">Zobraziť všetky</span>
+                </div>
+                <div class="card-visual">
+                    <div class="visa-card">
+                        <div class="card-logo">VISA</div>
+                        <div class="card-number">•••• •••• •••• 4242</div>
+                        <div class="card-holder">P. IVAN</div>
+                    </div>
+                </div>
+                <div class="credit-card-info">
+                    <strong>Moja kreditná karta</strong><br>
+                    <small>•••• 1234</small>
+                    <div class="credit-balance" id="credit-balance">4 950,00 €</div>
+                </div>
             </div>
         </main>
 
