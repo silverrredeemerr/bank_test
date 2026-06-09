@@ -8,22 +8,19 @@
 </head>
 <body>
     <div class="phone-frame">
-        <!-- Status bar -->
         <div class="status-bar">
             <span id="time">10:37</span>
-            <div class="right-info">5G • 87%</div>
+            <span>5G • 87%</span>
         </div>
 
         <header class="app-header">
-            <div class="header-top">
+            <div class="user-section">
+                <div class="avatar">P</div>
                 <div class="user-info">
-                    <div class="avatar">P</div>
-                    <div>
-                        <strong>P. Ivan</strong><br>
-                        <small>Privátny banking</small>
-                    </div>
+                    <strong>P. Ivan</strong><br>
+                    <small>Privátny banking</small>
                 </div>
-                <button class="upravit-btn">Upraviť</button>
+                <button class="upravit-btn" onclick="alert('Тут можна кастомізувати дашборд як у реальному додатку')">Upraviť</button>
             </div>
         </header>
 
@@ -35,12 +32,12 @@
                     <span class="see-all">Zobraziť všetko</span>
                 </div>
                 <div class="account-card">
-                    <div class="account-info">
-                        <strong>Demo účet</strong><br>
-                        <small>SK12 1100 0000 0008 1234 5678</small>
+                    <strong>Demo účet</strong>
+                    <div class="account-number">SK12 1100 0000 0008 1234 5678</div>
+                    <div class="balance-row">
+                        <div class="balance" id="main-balance">502,00 €</div>
                     </div>
-                    <div class="account-balance" id="main-balance">502,00 €</div>
-                    <div class="graph-placeholder">📈</div>
+                    <div class="mini-graph">📈 (залишок за останній місяць)</div>
                 </div>
             </div>
 
@@ -50,26 +47,30 @@
                     <h3>Karty</h3>
                     <span class="see-all">Zobraziť všetky</span>
                 </div>
-                <div class="card-visual">
-                    <div class="visa-card">
-                        <div class="card-logo">VISA</div>
-                        <div class="card-number">•••• •••• •••• 4242</div>
-                        <div class="card-holder">P. IVAN</div>
-                    </div>
+                <div class="card-item">
+                    <div class="visa-logo">VISA</div>
+                    <div>•••• •••• •••• 4242</div>
+                    <div class="card-holder">P. IVAN</div>
                 </div>
-                <div class="credit-card-info">
+                <div class="credit-info">
                     <strong>Moja kreditná karta</strong><br>
                     <small>•••• 1234</small>
                     <div class="credit-balance" id="credit-balance">4 950,00 €</div>
                 </div>
             </div>
+
+            <!-- Швидкі дії -->
+            <div class="quick-section">
+                <button class="action-btn" onclick="makeTransfer()">Nový prevod</button>
+                <button class="action-btn">Výber z bankomatu</button>
+            </div>
         </main>
 
         <nav class="bottom-nav">
-            <div class="nav-item active"><span class="nav-icon">🏠</span><span>Domov</span></div>
-            <div class="nav-item"><span class="nav-icon">💸</span><span>Platby</span></div>
-            <div class="nav-item"><span class="nav-icon">📊</span><span>Prehľady</span></div>
-            <div class="nav-item"><span class="nav-icon">👤</span><span>Ja</span></div>
+            <div class="nav-item active" onclick="switchTab(0)"><span class="nav-icon">🏠</span><span>Domov</span></div>
+            <div class="nav-item" onclick="switchTab(1)"><span class="nav-icon">💸</span><span>Platby</span></div>
+            <div class="nav-item" onclick="switchTab(2)"><span class="nav-icon">📊</span><span>Prehľady</span></div>
+            <div class="nav-item" onclick="switchTab(3)"><span class="nav-icon">👤</span><span>Ja</span></div>
         </nav>
     </div>
 
