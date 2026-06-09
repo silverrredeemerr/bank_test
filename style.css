@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.phone-frame {
+    width: 380px;
+    max-width: 100%;
+    background: #121212;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #00b4d8;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.time {
+    font-size: 15px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #121212;
+    color: white;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.balance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.balance-label {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.balance-amount {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.balance-change {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.quick-btn {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h3 {
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.account-item {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-balance {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.see-all {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.transactions {
+    background: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.transaction {
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction-amount.positive {
+    color: #4ade80;
+}
+
+.transaction-amount.negative {
+    color: #f87171;
+}
+
+.bottom-nav {
+    display: flex;
+    background: #1a1a1a;
+    padding: 8px 0;
+    border-top: 1px solid #333;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    color: #888;
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: #60a5fa;
+}
+
+.nav-icon {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 4px;
+}
